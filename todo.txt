@@ -1,0 +1,7 @@
+1. download and get the mixhtml
+2. link to mixhtml css and js in signup
+3. update the signup form
+4. make the email app in google 
+5. make the email function in x.py
+6. make the email function in app.py
+7. test it

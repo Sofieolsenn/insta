@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <title>Sign Up - Instagram</title>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <h1>Instagram</h1>
+                <form action="/signup" method="POST">
+                    <div>
+                        <input type="text" name="user_username" placeholder="Username" value="sofie" mix-check="{{ x.REGEX_USER_USERNAME }}">
+                        <input type="text" name="user_email" placeholder="Email" value="spfieoslen@gmail.com" mix-check="{{ x.REGEX_EMAIL }}">
+                        <input type="password" name="user_password" placeholder="password" value="1234" mix-check="{{ x.REGEX_USER_PASSWORD }}">
+                        <input type="text" name="user_first_name" placeholder="First Name" value="Sofie" mix-check="{{ x.REGEX_USER_FIRST_NAME }}">
+                        <input type="text" name="user_last_name" placeholder="Last Name" value="Olsen" mix-check="{{ x.REGEX_USER_LAST_NAME }}">
+                        <!-- <input type="text" name="user_phone" placeholder="Phone Number" required> -->
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+                <p>By signing up, you agree to our Terms & Privacy Policy.</p>
+            </header>
+        </section>
+        <section>
+            <h2>Already have an account?</h2>
+            <a href="{{ url_for('view_index') }}">Log in</a>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename = 'mixhtml.js' )}}"></script>
+</body>
+</html>

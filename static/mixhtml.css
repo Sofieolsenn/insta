@@ -1,0 +1,24 @@
+#mix-cover{    
+    position: fixed; top:0rem; left:0;
+    width: 100vw;
+    height: 0.3rem;
+    background-color: rgb(6, 182, 212);
+    z-index: 20;
+}
+.mix-hidden{
+    display: none !important;
+}
+.mix-fade-out {
+    animation: fadeOut 2s forwards;
+}
+.mix-error{
+    background-color: rgba(230,130,130, 0.5);
+}
+@keyframes mix-fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dashboard</h1>
+    <form action="/change_username" method="POST">
+        <label for="change_user_username">Change your username here</label>
+        <input type="text" name="change_user_username" placeholder="write your new username">
+        <button type="submit">change</button>
+    </form>
+    <form action="/change_password" method="POST">
+        <label for="change_user_password">Change your password here</label>
+        <input type="text" name="change_user_password" placeholder="write your new password">
+        <button type="submit">change</button>
+    </form>
+    <section>
+        <h2>logout</h2>
+        <a href="{{ url_for('handle_logout') }}">Logout</a>
+    </section>
+    <section>
+        <p>create a post</p>
+        <form action="/create-post">
+            <input type="text" name="post_text" placeholder="post text">
+        </form>
+    </section>
+</body>
+</html>

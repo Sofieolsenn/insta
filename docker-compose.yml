@@ -1,0 +1,38 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: twitter_flask2
+    depends_on:
+      - mariadb
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
+
+  mariadb:
+    image: mariadb:10.6.20
+    container_name: twitter_mariadb2
+    environment:
+      MYSQL_ROOT_PASSWORD: MyPasswordForYou
+      MYSQL_DATABASE: twitter
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: twitter_phpmyadmin2
+    depends_on:
+      - mariadb
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: MyPasswordForYou
+    ports:
+      - 8080:80
+volumes:
+  mariadb_data:
+
+

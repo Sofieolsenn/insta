@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Instagram login card */
+section:first-child {
+    background: #fff;
+    padding: 40px 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3897f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b6fb8;
+}
+
+p {
+    margin: 15px 0;
+    color: #999;
+    font-size: 12px;
+}
+
+section:first-child div p {
+    margin: 5px 0;
+    color: #3897f0;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Sign up section */
+section:last-child {
+    background: #fff;
+    padding: 20px 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+section:last-child h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+section:last-child a {
+    color: #3897f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section:last-child a:hover {
+    text-decoration: underline;
+}

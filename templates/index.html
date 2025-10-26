@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=$, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <h1>Instagram</h1>
+                <form action="/login" method="POST">
+                    <div>
+                        <input type="text" name="user_username" placeholder="username">
+                        <input type="text" name="user_password" placeholder="password">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+                <p> ------- or ------- </p>
+                <div>
+                    <p>login with facebook</p>
+                    <p>forgot your passwod?</p>
+                </div>
+            </header>
+        </section>
+        <section>
+            <h2>Dont have an account?</h2>
+            <a href="{{ url_for('view_signup') }}">Sign up now</a>
+        </section>
+    </main>
+</body>
+</html>
